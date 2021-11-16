@@ -2,18 +2,24 @@ import React from "react"
 import ItemCount from "../ItemCount/ItemCount"
 
 
-const ItemCard = () => {
-const product = [
-    {nombre: "Ki-Mono", foto: <img className="imgItem" src="./imgs/KiMono2.jpeg" width="200px" height="350px" alt="" /> , cantidad:4, id: 1},
-    {nombre: "Ki-Mono 2", foto: <img className="imgItem" src="../imgs/KiMono1.jpeg" width="200px" height="350px" alt="" />, cantidad:6, id: 2}
-]
+const ItemCard = ({product}) => {
+
 
 return(
-    <div className="itemList">
-        <div className="itemList">
-        {product.map(product => <div className="itemBox" key={product.id}><h3 className="ItemTitle">{product.nombre}</h3>{product.foto} {<ItemCount initial={1} stock={product.cantidad}/>}</div>)}
-        </div>
-    </div>
+  <div className="container">
+      <div className="card w-50 mt-5" key={product.id}>
+          <div className="card-header">
+              <h3>{`${product.nombre}`}</h3>
+          </div>
+          <div className="card-body">
+              {product.foto}
+          </div>
+          <div className="card-footer">
+              <ItemCount/>
+          </div>
+      </div>
+
+  </div>
 )}
 
 export default ItemCard
