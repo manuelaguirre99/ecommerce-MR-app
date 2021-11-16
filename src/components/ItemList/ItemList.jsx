@@ -1,9 +1,9 @@
 import React from "react";
 import ItemCard from "../ItemCard/ItemCard";
 
-const ItemList = ({product}) =>{
+const ItemList = ({productos}) =>{
     return(
-        product.map(product => <ItemCard product={product} key={product.id} />)
+        productos.map(productos => <ItemCard productos={productos} key={productos.id} />)
     )}
 
 

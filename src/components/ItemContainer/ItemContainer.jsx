@@ -1,11 +1,12 @@
 import React from "react";
 import ItemList from "../ItemList/ItemList";
+import { useState,useEffect } from "react";
 
 
 const ItemContainer = () =>{
 
 
-    const product = [
+    const productos = [
         {nombre: "Ki-Mono", id: 1, foto: <img className="imgItem" src="./imgs/KiMono2.jpeg" width="200px" height="350px" alt="" /> , cantidad:4, id: 1},
         {nombre: "Ki-Mono 2", id: 2, foto: <img className="imgItem" src="../imgs/KiMono1.jpeg" width="200px" height="350px" alt="" />, cantidad:6, id: 2}
     ]
@@ -14,7 +15,7 @@ const ItemContainer = () =>{
         const condition = true
         if (condition){
             setTimeout(()=>{
-                resolve(product)
+                resolve(productos)
             },2000)
         } else {
             setTimeout(()=>{
