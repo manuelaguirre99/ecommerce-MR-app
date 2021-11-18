@@ -7,11 +7,11 @@ const ItemCard = ({productos}) => {
 
 return(
   <div className="container">
-      <div className="card w-50 mt-5" key={productos.id}>
-          <div className="card-header">
+      <div className="itemBox" key={productos.id}>
+          <div className="itemTitle">
               <h3>{`${productos.nombre}`}</h3>
           </div>
-          <div className="card-body">
+          <div className="imgItem">
               {productos.foto}
           </div>
           <div className="card-footer">
